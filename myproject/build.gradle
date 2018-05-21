@@ -1,0 +1,26 @@
+task helloWorld << {
+   println "Hello World! 2017-12-21"
+}
+
+task copyFile(type: Copy) {
+   from 'xml'
+   into 'destination'
+}
+
+apply plugin: 'java'
+
+group = 'com.mycompany.app'
+
+archivesBaseName = 'myproject'
+
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12',
+    
+}
